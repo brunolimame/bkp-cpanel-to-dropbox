@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import pathlib
 import dropbox
 import re
 import sys
