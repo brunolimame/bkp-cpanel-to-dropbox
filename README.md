@@ -13,9 +13,7 @@ At the end of sending blocks, the final file is saved in Dropbox.
 ### Sending BKP to Dropbox
 - Create an app on Dropbox
 - Generate an authentication token
-- Paste your key in the script
-
-https://github.com/brunolimame/bkp-cpanel-to-dropbox/blob/4f2276e445c0d890ddd0c00a376fe8e5b57f0c6b/bkp-cpanel-dropbox.py#L55
+- Paste your **ACCESS TOKEN** in the script, [line 54](https://github.com/brunolimame/bkp-cpanel-to-dropbox/blob/399ca291fdc4ba18e27ec64c96c98034f1ee7fb8/bkp-cpanel-dropbox.py#L54)
 
 - Install the dependencies
 - Give the script permission
