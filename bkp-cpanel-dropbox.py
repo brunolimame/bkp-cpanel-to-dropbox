@@ -22,9 +22,9 @@ def upload(
         calc_percent = 0
         if file_size <= chunk_size:
             result_upload  = dbx.files_upload(f.read(), target_path)
-            print("Arquivo '" + result_upload.name + "' enviado 100%")
+            print("File '" + result_upload.name + "' uploaded 100%")
         else:
-            with tqdm(total=file_size, desc="Enviando", unit_scale=True, unit_divisor=1024) as pbar:
+            with tqdm(total=file_size, desc="Uploading", unit_scale=True, unit_divisor=1024) as pbar:
                 upload_session_start_result = dbx.files_upload_session_start(
                     f.read(chunk_size)
                 )
@@ -39,7 +39,7 @@ def upload(
                         result_upload = dbx.files_upload_session_finish(
                                 f.read(chunk_size), cursor, commit
                             )
-                        print("Arquivo '" + result_upload.name + "' enviado 100%")
+                        print("File '" + result_upload.name + "' uploaded 100%")
                     else:
                         dbx.files_upload_session_append(
                             f.read(chunk_size),
